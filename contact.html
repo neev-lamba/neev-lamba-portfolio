@@ -15,7 +15,7 @@
         <h1>Neev Lamba</h1>
     </header>
 
-    <a href="#main-content" class="skip-link">Jump to Content</a>
+   
 
     <nav>
         <ul>
@@ -24,7 +24,8 @@
             <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
     </nav>
-
+    
+    <button id="jump-to-content" onclick="document.querySelector('#main-content').scrollIntoView()">Jump to Content</button>
 
     <main id="main-content">
         <button id="social-media-button">Check out my socials!</button>
@@ -63,7 +64,8 @@
             <input type="email" id="email" name="email" required>
         
             <label for="message">Message:</label>
-
+            <textarea id="message" name="message" required></textarea>
+        
             <button type="submit" name="submit">Send Message</button>
             </form>
         </div>

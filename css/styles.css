@@ -149,7 +149,7 @@ section p {
     margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 375px) {
   .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -168,7 +168,7 @@ section p {
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -391,4 +391,16 @@ p {
 
 .flip-container:hover .flip-description, .flip-container.hover .flip-description {
   opacity: 1;
+}
+
+#jump-to-content {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+  background-color: #fff;
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  z-index: 9999;
 }

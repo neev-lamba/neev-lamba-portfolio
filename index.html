@@ -17,8 +17,6 @@
         <h1>Neev Lamba</h1>
     </header>
 
-    <a href="#main" class="skip-link">Jump to Content</a>
-
     <nav>
         <ul>
             <li><a href="index.html" class="active">Home</a></li>
@@ -27,12 +25,14 @@
         </ul>
     </nav>
 
+    <button id="jump-to-content" onclick="document.querySelector('#main').scrollIntoView()">Jump to Content</button>
+
     <figure>
         <img src="images/start_image.jpg" alt="Self-Portrait" class = "center" > 
         <figcaption class ="typing anim-typewriter" style=> Welcome! I'm Neev :) </figcaption> 
     </figure>
    
-    <main>
+    <main id = "main">
         <button id="social-media-button">Check out my socials!</button>
         <script>document.getElementById('social-media-button').addEventListener('click', function() {
             document.body.classList.toggle('social-media-visible');
