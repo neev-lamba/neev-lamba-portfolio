@@ -3,57 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <!-- <link rel="stylesheet" href="css/html5reset.css"> -->
+    
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <title>Neev Lamba - Contact</title>
-    <style>
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 10px;
-        }
-
-        .grid-item {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: center;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
 </head>
 <body>
     <header>
         <h1>Neev Lamba</h1>
     </header>
 
+    <a href="#main-content" class="skip-link">Jump to Content</a>
+
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
+            <li><a href="experience.html">Experience</a></li>
             <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
     </nav>
 
-    <a href="#main-content" class="skip-link">Jump to Content</a>
 
     <main id="main-content">
-        <div class="grid-container">
-            <div class="grid-item"><img src="images/neev-10.jpg"" alt="Image 1"></div>
-            <div class="grid-item"><img src="images/neev-11.jpg" alt="Image 2"></div>
-            <div class="grid-item"><img src="images/neev-12.jpg" alt="Image 3"></div>
-            <div class="grid-item"><img src="images/neev-13.jpg" alt="Image 4"></div>
-            <div class="grid-item"><img src="images/neev-14.jpg" alt="Image 5"></div>
-            <div class="grid-item"><img src="images/neev-15.jpg" alt="Image 6"></div>
-            <div class="grid-item"><img src="images/neev-16.jpg" alt="Image 7"></div>
-            <div class="grid-item"><img src="images/neev-17.jpg" alt="Image 8"></div>
-            <div class="grid-item"><img src="images/neev-18.jpg" alt="Image 9"></div>
+        <button id="social-media-button">Check out my socials!</button>
+        <script>document.getElementById('social-media-button').addEventListener('click', function() {
+            document.body.classList.toggle('social-media-visible');
+        });</script>
+        <div class="circle-container">
+            <div class="circle-item"><img src="images/neev-10.jpg" alt="Image 1"></div>
+            <div class="circle-item"><img src="images/neev-11.jpg" alt="Image 2"></div>
+            <div class="circle-item"><img src="images/neev-12.jpg" alt="Image 3"></div>
+            <div class="circle-item"><img src="images/neev-13.jpg" alt="Image 4"></div>
+            <div class="circle-item"><img src="images/neev-14.jpg" alt="Image 5"></div>
+            <div class="circle-item"><img src="images/neev-15.jpg" alt="Image 6"></div>
+            <div class="circle-item"><img src="images/neev-16.jpg" alt="Image 7"></div>
+            <div class="circle-item"><img src="images/neev-17.jpg" alt="Image 8"></div>
+            <div class="circle-item"><img src="images/neev-18.jpg" alt="Image 9"></div>
         </div>
     </main>
 
+    <div id="social-media-icons">
+        <a href="https://www.linkedin.com/in/neev-lamba/"><img src="images/linkedin.png" alt="Linked-In"></a>
+        <a href="https://github.com/neev-lamba"><img src="images/github.png" alt="Github"></a>
+        <a href="https://www.instagram.com/neev_03/"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="https://open.spotify.com/user/neev888?si=0be8780081954d7c"><img src="images/spotify.png" alt="Spotify"></a>
+    </div>
+    
+
     <footer>
+        <div class="contact-form">
+            <h3>Contact Me</h3>
+            <form action="submit-form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="message">Message:</label>
+
+            <button type="submit" name="submit">Send Message</button>
+            </form>
+        </div>
+        <form class="contact-form" action="process-form.php" method="post"></form>
         <p>&copy; 2023 Neev Lamba. All Rights Reserved.</p>
     </footer>
 </body>
